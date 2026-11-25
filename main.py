@@ -8,6 +8,9 @@ import os
 
 LINE = "Per my logs, I technically won \u2014 the scoreboard is simply running an outdated version of reality."
 
+if not 1 <= len(LINE) <= 200:
+    raise ValueError("excuse line must be 1-200 characters")
+
 
 def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
